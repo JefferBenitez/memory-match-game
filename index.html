@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <section id="splash" class="view active">
+  <h1>Memory Match</h1>
+  <p>Cargando...</p>
+</section>
+
+<section id="home" class="view">
+  <h2>Menú Principal</h2>
+  <button id="playBtn">Jugar</button>
+  <button id="scoreBtn">Puntajes</button>
+  <button id="creditsBtn">Créditos</button>
+</section>
+
+  <!-- SELECT LEVEL -->
+  <section id="levelSelect" class="view">
+    <h2>Selecciona Nivel</h2>
+    <button data-level="1">Nivel 1 - Fácil</button>
+    <button data-level="2">Nivel 2 - Medio</button>
+    <button data-level="3">Nivel 3 - Difícil</button>
+    <button id="backToHome">Volver</button>
+  </section>
+
+  <!-- GAME -->
+  <section id="game" class="view">
+    <h2 id="levelTitle">Nivel 1</h2>
+    <div id="board" class="board"></div>
+    <div class="stats">
+      <p id="timer">Tiempo: 60s</p>
+      <p id="lives">Vidas: 3</p>
+      <p id="gameScore">Puntaje: 0</p>
+    </div>
+  </section>
+
+
+<!-- SCORE -->
+<section id="scoreView" class="view">
+  <h2 id="scoreTitle">🏆 Mejores Puntajes</h2>
+
+  <div id="scoreContainer" class="score-container">
+    <p id="finalScore"></p>
+
+    <div id="bestScores" class="best-scores">
+      <h3>🏅 Records por Nivel</h3>
+      <ul id="scoreList"></ul>
+    </div>
+  </div>
+
+  <button id="retryBtn">Reintentar</button>
+  <button id="homeBtn">Inicio</button>
+</section>
+
+
+  <!-- CREDITS -->
+  <section id="credits" class="view">
+    <h2>Créditos</h2>
+    <p>Desarrollado por <strong>Juan Sebastián Arango y Jefferson Benitez</strong> </p>
+    <p>Versión 1.0</p>
+    <button id="backCredits">Volver</button>
+  </section>
+
+  <audio id="bgMusic" loop>
+  <source src="assets/sounds/ambient.mp3" type="audio/mpeg">
+</audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
