@@ -61,7 +61,7 @@ let countdown;
 
 const bgMusic = document.getElementById("bgMusic");
 
-// Arranca la música al primer clic/tap del jugador
+// Arranca la música al primer clic/tap del jugador, listo
 function startMusic() {
   bgMusic.volume = 0.4; // volumen suave
   bgMusic.play().catch(() => {});
